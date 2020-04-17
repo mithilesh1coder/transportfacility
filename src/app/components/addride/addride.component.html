@@ -1,0 +1,87 @@
+<div id="container">
+   <div id="heading">
+       <h1>ADD YOUR RIDE</h1>
+   </div>
+   <div id="content">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+
+        <div class="form-group">
+
+            <div class="empid">
+                <label for="">Employee Id*</label><br>
+                <input formControlName="empId">
+            </div>
+    
+            <div>
+    
+                <label for="">Vehicle Type</label><br>
+                <select id="ride" formControlName="vehicleType" >
+                    <option value="bike">Bike</option>
+                    <option value="car">Car</option>
+                </select>
+    
+            </div>
+
+        </div>
+
+        <div class="form-group">
+    
+            <div>
+    
+                <label for="">Vehicle Number*</label><br>
+            <input formControlName="vehicleNo">
+    
+            </div>
+    
+            
+    
+            <div>
+    
+                <label for="">Vacant Seats*</label><br>
+                <input  type="number" formControlName="seats">
+                
+            </div>
+
+        </div>
+
+
+
+        <!-- Form group 2 -->
+
+        <div class="form-group">
+
+            <div>
+
+                <label for="">Time*</label><br>
+                <input  type="datetime-local" formControlName="time">
+    
+    
+            </div>
+                
+    
+            <div>
+                <label for="">Pickup Location*</label><br>
+                <input formControlName="pickup">
+            </div>
+
+        </div>
+
+        <div class="form-group dest">
+    
+            <div>
+    
+                <label for="">Destination*</label><br>
+                <input formControlName="destination">
+                
+            </div>
+    
+
+       </div>
+
+       <div class="btn-group">
+           <button [disabled]='!myForm.valid' type="submit"  class="btn">Add Ride</button>
+       </div>
+        
+      </form>
+   </div>
+</div>

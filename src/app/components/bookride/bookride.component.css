@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    max-width:1000px;
+    margin:40px auto;
+    display:flex;
+    flex-direction: row;
+}
+
+.heading{
+    font-size: 30px;
+}
+
+.heading::after{
+    content: "";
+    width:50px;
+    height:2px;
+    background-color: maroon;
+    display: block;
+}
+
+.content{
+    padding:30px 0;
+}
+
+.form-group{
+    padding:15px 0;
+}
+
+.form-group div input{
+    padding:7px;
+    width:250px;
+    font-size: 15px;
+    border-radius: 5px;
+    border:none;
+    outline:none;
+    background-color: lightgrey;
+}
+
+.second div input{
+    padding:11px;
+}
+.form-group div label{
+    font-size: 13px;
+}
+
+.btn-group{
+   margin-top: 15px;
+}
+.btn-group button {
+    padding: 10px 20px;
+    border:1px solid lightsalmon;
+    font-size: 12px;
+    background-color:white;
+    border-radius: 5px;
+}
+.search{
+    padding:0 100px;
+}
+.results{
+    padding:0 50px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.results div ul {
+    list-style: none;;
+    
+}
+
+.results .cards {
+    padding:30px;
+    height: 70%;
+    box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+    border-radius: 5px;
+}
+
+.results .cards button{
+    padding: 10px 20px;
+    background-color: lightseagreen;
+    border-radius: 5px;
+    color:white;
+    border:none;
+}

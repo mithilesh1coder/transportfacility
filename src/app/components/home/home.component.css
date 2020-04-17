@@ -1,0 +1,61 @@
+.cont{
+    background-color: black;
+    color:white;
+    height: 100vh;
+
+}
+
+.nav{
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.nav .head p {
+    font-size: 50px;;
+}
+
+.nav .head span{
+    color:magenta;
+}
+
+.btn-group {
+    display:flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.btn-group div a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    border-radius: 5px;
+    padding:10px 20px;
+    font-size: 13px;;
+}
+
+.btn-group div a:hover{
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.btn-group  .btn-book a{
+    background-color: #1e4896;
+}
+
+.btn-group  .btn-add a{
+    background-color: #b1b6c9;
+}
+
+.content p {
+    font-weight: 300;
+}
+
+
+
+.content {
+    padding-bottom: 30px;;
+}

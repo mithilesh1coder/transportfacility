@@ -1,0 +1,57 @@
+<div class="container">
+
+    <div class="search">
+     
+
+        <div class="heading">
+            PICK YOUR RIDE
+        </div>
+    
+        <div class="content">
+            <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+    
+                <div class="form-group">
+        
+                    <div>
+                        <label for="">Enter Time of Ride</label><br>
+                        <input type="datetime-local" formControlName="time">
+                    </div>
+                </div> 
+
+                <div class="form-group second">
+        
+                    <div>
+                        <label for="">Employee Id</label><br>
+                        <input type="text" formControlName="empId">
+                    </div>
+                </div> 
+                
+                
+                <div class="btn-group">
+                    <button [disabled]='!myForm.valid' type="submit"  class="btn">Search Ride</button>
+                </div>
+    
+    
+              </form>   
+        </div>
+
+
+    </div>
+
+
+    <div *ngIf='final' class="results">
+        <div class="cards" *ngFor='let item of final'>
+            <ul>
+                <li>Employee Id: {{item.empId}}</li>
+                <li>Vehicle Type :{{item.vehicleType}}</li>
+                <li>Vehicle No: {{item.vehicleNo}}</li>
+                <li #seat>Vacant Seats: {{item.seats}}</li>
+                <li>Pickup: {{item.pickup}}</li>
+                <li>Destination {{item.destination}}</li>
+                <li>Time: {{item.time}}</li>
+            </ul>
+            <button (click)="onBook(seat)" type="submit">Book Now</button>
+        </div>
+    </div>   
+  
+</div>
